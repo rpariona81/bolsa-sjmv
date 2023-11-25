@@ -68,7 +68,7 @@
                     <!-- ============================================================== -->
                     <!-- Logo -->
                     <!-- ============================================================== -->
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="<?=base_url('/admin')?>">
                         <!-- Logo icon -->
                         <b class="logo-icon">
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
@@ -134,12 +134,12 @@
                                         <p class="mb-0"><?= $this->session->userdata('user_email') ?></p>
                                     </div>
                                 </div>
-                                <a class="dropdown-item" href="/admin/perfil"><i data-feather="user" class="feather-sm text-info me-1 ms-1"></i>
+                                <a class="dropdown-item" href="<?=base_url('/admin/perfil')?>"><i data-feather="user" class="feather-sm text-info me-1 ms-1"></i>
                                     Mi perfil</a>
-                                <a class="dropdown-item" href="/admin/claves"><i data-feather="credit-card" class="feather-sm text-info me-1 ms-1"></i>
+                                <a class="dropdown-item" href="<?=base_url('/admin/claves')?>"><i data-feather="credit-card" class="feather-sm text-info me-1 ms-1"></i>
                                     Cambio de clave</a>
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="/logout"><i data-feather="log-out" class="feather-sm text-danger me-1 ms-1"></i>
+                                <a class="dropdown-item" href="<?=base_url('/logout')?>"><i data-feather="log-out" class="feather-sm text-danger me-1 ms-1"></i>
                                     Cerrar sesión</a>
                             </div>
                         </li>
@@ -165,31 +165,31 @@
                             <span class="hide-menu">WebApp Bolsa laboral</span>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/admin/" aria-expanded="false">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?=base_url('/admin')?>" aria-expanded="false">
                                 <i class="mdi mdi-gauge"></i>
                                 <span class="hide-menu">Panel de control </span>
                             </a>
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/admin/estudiantes" aria-expanded="false"><i class="mdi mdi-account-check"></i><span class="hide-menu">Estudiantes</span></a>
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?=base_url('/admin/estudiantes')?>" aria-expanded="false"><i class="mdi mdi-account-check"></i><span class="hide-menu">Estudiantes</span></a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/admin/docentes" aria-expanded="false"><i class="mdi mdi-account-box"></i><span class="hide-menu">Docentes</span></a>
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?=base_url('/admin/docentes')?>" aria-expanded="false"><i class="mdi mdi-account-box"></i><span class="hide-menu">Docentes</span></a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/admin/convocatorias" aria-expanded="false"><i class="mdi mdi-clipboard-check"></i><span class="hide-menu">Convocatorias</span></a>
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?=base_url('/admin/convocatorias')?>" aria-expanded="false"><i class="mdi mdi-clipboard-check"></i><span class="hide-menu">Convocatorias</span></a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/admin/postulaciones" aria-expanded="false"><i class="mdi mdi-comment-processing-outline"></i><span class="hide-menu">Postulaciones</span></a>
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?=base_url('/admin/postulaciones')?>" aria-expanded="false"><i class="mdi mdi-comment-processing-outline"></i><span class="hide-menu">Postulaciones</span></a>
                         </li>
                         <hr>
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/admin/perfil" aria-expanded="false"><i class="mdi mdi-account-card-details"></i><span class="hide-menu">Mi perfil</span></a>
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?=base_url('/admin/perfil')?>" aria-expanded="false"><i class="mdi mdi-account-card-details"></i><span class="hide-menu">Mi perfil</span></a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/admin/programas" aria-expanded="false"><i class="mdi mdi-clipboard-check"></i><span class="hide-menu">Programas</span></a>
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?=base_url('/admin/programas')?>" aria-expanded="false"><i class="mdi mdi-clipboard-check"></i><span class="hide-menu">Programas</span></a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="/logout" aria-expanded="false"><i class="mdi mdi-directions"></i><span class="hide-menu">Cerrar sesión</span></a>
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="<?=base_url('/logout')?>" aria-expanded="false"><i class="mdi mdi-directions"></i><span class="hide-menu">Cerrar sesión</span></a>
                         </li>
                     </ul>
                 </nav>
@@ -203,7 +203,7 @@
                 <!-- item-->
                 <a href="#" class="link" data-bs-toggle="tooltip" data-bs-placement="top" title="Email"><i class="mdi mdi-gmail"></i></a>
                 <!-- item-->
-                <a href="/logout" class="link" data-bs-toggle="tooltip" data-bs-placement="top" title="Cerrar sesión"><i class="mdi mdi-power"></i></a>
+                <a href="<?=base_url('/logout')?>" class="link" data-bs-toggle="tooltip" data-bs-placement="top" title="Cerrar sesión"><i class="mdi mdi-power"></i></a>
             </div>
             <!-- End Bottom points-->
         </aside>

@@ -42,7 +42,7 @@
             </div>
             <div class="mb-2">
                 <div class="pull-left">
-                    <a class="btn btn-warning btn-lg" href="/users">Regresar</a>
+                    <a class="btn btn-warning btn-lg" href="<?=base_url('/users')?>">Regresar</a>
                 </div>
                 <div class="pull-right">
                     <?php

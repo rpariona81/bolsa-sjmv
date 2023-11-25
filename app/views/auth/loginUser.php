@@ -98,7 +98,7 @@
                     </div>
                     <div class="form-row">
                         <div class="col-6 pull-left">
-                            <a class="btn btn-warning px-3 btn-block" href="/">Regresar</a>&nbsp;&nbsp;
+                            <a class="btn btn-warning px-3 btn-block" href="<?=base_url()?>">Regresar</a>&nbsp;&nbsp;
                         </div>
                         <div class="col-6 pull-right">
                             <input class="btn bg-primary text-white px-3 btn-block" id="btnLogin" type="submit" value="Ingresar"></input>

@@ -17,7 +17,7 @@
 
             <div class="col-12">
                 <div class="float-end">
-                    <a href="/admin/programas" class="btn btn-danger" type="button">Cancelar</a>
+                    <a href="<?=base_url('/admin/programas')?>" class="btn btn-danger" type="button">Cancelar</a>
                     <input class="btn btn-primary" type="submit" value="Crear programa"></input>
                 </div>
             </div>

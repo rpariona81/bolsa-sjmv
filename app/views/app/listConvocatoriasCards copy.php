@@ -48,7 +48,7 @@
                                                 </p>
                                                 <!--<div class="float-end">-->
                                                 <!--<div class="">-->
-                                                <a class="bg-success btn input-block-level form-control btn-outline-success" href="/users/convocatoria/<?= $vigente->id; ?>"><strong>Ver convocatoria</strong></a>
+                                                <a class="bg-success btn input-block-level form-control btn-outline-success" href="<?=base_url('/users/convocatoria/'. $vigente->id); ?>"><strong>Ver convocatoria</strong></a>
                                                 <!--</div>-->
                                         </section>
                                     </article>
@@ -87,7 +87,7 @@
                                     </p>
                                     <!--<div class="float-end">-->
                                     <div class="text-center">
-                                        <a class="bg-danger btn input-block-level form-control btn-outline-danger" href="/users/convocatoria/<?= $novigente->id; ?>"><strong>Ver convocatoria</strong></a>
+                                        <a class="bg-danger btn input-block-level form-control btn-outline-danger" href="<?=base_url('/users/convocatoria/'. $novigente->id); ?>"><strong>Ver convocatoria</strong></a>
                                     </div>
                             </section>
                         </article>

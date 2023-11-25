@@ -13,7 +13,7 @@
                 <small><?= $item->career_title ?></small></p>
                 <!--<div class="float-end">-->
                 <div class="">
-                    <a class="btn btn-outline-success" href="/users/convocatoria/<?= $item->id; ?>"><strong>Ver más detalles</strong></a>
+                    <a class="btn btn-outline-success" href="<?=base_url('/users/convocatoria/'.$item->id); ?>"><strong>Ver más detalles</strong></a>
                 </div>
             </div>
         </div>

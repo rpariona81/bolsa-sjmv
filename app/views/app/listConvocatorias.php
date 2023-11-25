@@ -14,7 +14,7 @@
                         <i class="fa fa-calendar" style="height: 20px; width: 20px; text-align: center;"></i><span>&nbsp;Finaliza el <?= date("d/m/Y", strtotime($item->date_vigency)); ?></span>
                     </li>
                     <li>
-                        <i class="fa fa-map-marker" style="height: 20px; width: 20px; text-align: center;"></i><span>&nbsp;<?=$item->ubicacion?></span>
+                        <i class="fa fa-map-marker" style="height: 20px; width: 20px; text-align: center;"></i><span>&nbsp;<?= $item->ubicacion ?></span>
                     </li>
                 </ul>
                 <br>
@@ -24,7 +24,7 @@
                 </p>
                 <!--<div class="float-end">-->
                 <div class="">
-                    <a class="btn btn-outline-success" href="/users/convocatoria/<?= $item->id; ?>"><strong>Ver convocatoria</strong></a>
+                    <a class="btn btn-outline-success" href="<?= base_url('/users/convocatoria/' . $item->id) ?>"><strong>Ver convocatoria</strong></a>
                 </div>
             </section>
         </article>

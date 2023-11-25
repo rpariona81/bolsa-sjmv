@@ -23,7 +23,7 @@
 
   <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-kadence text-white">
     <div class="container">
-    <a class="navbar-brand" href="/">
+    <a class="navbar-brand" href="<?=base_url()?>">
       <img class="img rounded-circle mb-10" src="<?= base_url('assets/img/logo_2023.png') ?>" height="80" />
       &nbsp;&nbsp;&nbsp;IESTP "RICARDO RAMOS PLATA"
     </a>
@@ -47,7 +47,7 @@
               <img class="card-img-top" src="<?= base_url('assets/img/login1.jpeg') ?>" alt="Estudiantes/Egresados" width="200" height="260">
               <div class="card-body">
                 <h4 class="card-text">Estudiantes y egresados</h4>
-                <a class="btn btn-large btn-primary" href="/wp-login"><strong>Ingresar</strong></a>
+                <a class="btn btn-large btn-primary" href="<?=base_url('/wp-login')?>"><strong>Ingresar</strong></a>
               </div>
             </div>
           </div>
@@ -57,7 +57,7 @@
               <img class="card-img-top" src="<?= base_url('assets/img/login2.jpg') ?>" alt="Docentes" width="200" height="260">
               <div class="card-body">
                 <h4 class="card-text">Docentes</h4>
-                <a class="btn btn-large btn-info" href="/wp-login"><strong>Ingresar</strong></a>
+                <a class="btn btn-large btn-info" href="<?=base_url('/wp-login')?>"><strong>Ingresar</strong></a>
               </div>
             </div>
           </div>

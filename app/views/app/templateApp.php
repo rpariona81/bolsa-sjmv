@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i')?>" rel="stylesheet">
 
     <!-- Bootstrap css -->
-    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+    <!-- <link rel="stylesheet" href="<?=base_url('css/bootstrap.css')?>"> -->
     <link href="<?= base_url('public/app/lib/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet">
 
     <!-- Libraries CSS Files -->
@@ -80,31 +80,31 @@
                 <!--<h1><a href="#body" class="scrollto"><span>e</span>Startup</a></h1>-->
                 <!-- Uncomment below if you prefer to use an image logo -->
                 <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
-                <a href="/users"><img src="<?= base_url('public/app/img/logo-mini.png') ?>" alt="homepage" width="70" height="82" class="light-logo" /></a>
+                <a href="<?=base_url('/users')?>"><img src="<?= base_url('public/app/img/logo-mini.png') ?>" alt="homepage" width="70" height="82" class="light-logo" /></a>
                 <strong><?= getenv('APP_NAME') ?></strong>
             </div>
 
             <nav id="nav-menu-container" style="margin-top: 1.1rem; font-size: 2em;">
                 <ul class="nav-menu">
-                    <li class="menu-active"><a href="/users"><i class="fa fa-area-chart"></i>
+                    <li class="menu-active"><a href="<?=base_url('/users')?>"><i class="fa fa-area-chart"></i>
                             Convocatorias</a></li>
                     <?php
                     if ($this->session->userdata('user_rol') == 'estudiante') {
                         echo '<li class="nav-item">';
-                        echo '<a class="nav-link" href="/users/postulaciones">';
+                        echo '<a class="nav-link" href="'.base_url('/users/postulaciones').'">';
                         echo '   <i class="fa fa-id-badge"></i>';
                         echo '    Mis postulaciones';
                         echo '</a>';
                         echo '</li>';
 
                         echo '<li class="nav-item">';
-                        echo '<a class="nav-link" href="/users/perfil">';
+                        echo '<a class="nav-link" href="'.base_url('/users/perfil').'">';
                         echo '    <i class="fa fa-id-card-o"></i>';
                         echo '    Mi perfil</a>';
                         echo '</li>';
 
                         echo '<li class="nav-item">';
-                        echo '<a class="nav-link" href="/users/descarga_cv">';
+                        echo '<a class="nav-link" href="'.base_url('/users/descarga_cv').'">';
                         echo '    <i class="fa fa-file-word-o"></i>';
                         echo '    Modelo CV</a>';
                         echo '</li>';
@@ -119,8 +119,8 @@
                         </a>
                         <ul>
                         <!--<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">-->
-                            <li><a href="/users/credenciales"><i class="fa fa-key" aria-hidden="true"></i>&nbsp;Cambiar clave</a></li>
-                            <li><a href="/logout"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;Cerrar sesión</a></li>
+                            <li><a href="<?=base_url('/users/credenciales')?>"><i class="fa fa-key" aria-hidden="true"></i>&nbsp;Cambiar clave</a></li>
+                            <li><a href="<?=base_url('/logout')?>"><i class="fa fa-sign-out" aria-hidden="true"></i>&nbsp;Cerrar sesión</a></li>
                         </ul>
                     </li>
                 </ul>

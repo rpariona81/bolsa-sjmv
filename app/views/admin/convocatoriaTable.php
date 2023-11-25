@@ -26,10 +26,10 @@
                                 </button>
 
                                 &nbsp;
-                                <a class="btn btn-danger" href="/admin/convocatorias">Limpiar filtro</a>
+                                <a class="btn btn-danger" href="<?=base_url('/admin/convocatorias')?>">Limpiar filtro</a>
 
                                 &nbsp;
-                                <a class="btn waves-effect waves-light btn-success pull-right hidden-sm-down" data-toggle="tooltip" data-placement="bottom" title="Crear nuevo registro" href="/admin/newconvocatoria">Nueva convocatoria&nbsp;&nbsp;<i class="fa fa-plus"></i></a>
+                                <a class="btn waves-effect waves-light btn-success pull-right hidden-sm-down" data-toggle="tooltip" data-placement="bottom" title="Crear nuevo registro" href="<?=base_url('/admin/newconvocatoria')?>">Nueva convocatoria&nbsp;&nbsp;<i class="fa fa-plus"></i></a>
 
                             </div>
                         </div>
@@ -88,7 +88,7 @@
                                 <td class="text-center">
                                     <?php
                                     if ($item->cant_postulantes) {
-                                        echo '<div><a class="btn btn-outline-primary btn-sm" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ver postulantes" href="/admin/convocados/' . $item->id . '">' . $item->cant_postulantes . '&nbsp;&nbsp;<i class="fa fa-users"></i></a></div>';
+                                        echo '<div><a class="btn btn-outline-primary btn-sm" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Ver postulantes" href="'.base_url('/admin/convocados/' . $item->id) . '">' . $item->cant_postulantes . '&nbsp;&nbsp;<i class="fa fa-users"></i></a></div>';
                                     } else {
                                         echo '0';
                                     }
@@ -118,7 +118,7 @@
                                         }
                                         ?>
                                         &nbsp;&nbsp;
-                                        <a class="btn btn-outline-success btn-sm" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Editar" href="/admin/convocatoria/<?= $item->id ?>"><i class="fa fa-edit"></i></a>
+                                        <a class="btn btn-outline-success btn-sm" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Editar" href="<?=base_url('/admin/convocatoria/'. $item->id) ?>"><i class="fa fa-edit"></i></a>
                                     </div>
                                 </td>
                                 </tr>

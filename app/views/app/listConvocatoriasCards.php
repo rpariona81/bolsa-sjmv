@@ -53,7 +53,7 @@
                                             <span>&nbsp;<?= $item->vacancy_numbers ?>&nbsp;vacantes - &nbsp;<?= $item->type_offer ?></span>
                                         </li>
                                     </ul>
-                                    <a type="button" class="align-self-end btn btn-lg btn-block btn-primary" style="margin-top: auto;" href="/users/convocatoria/<?= $item->id; ?>"><strong>Ver convocatoria</strong></a>
+                                    <a type="button" class="align-self-end btn btn-lg btn-block btn-primary" style="margin-top: auto;" href="<?=base_url('/users/convocatoria/'. $item->id) ?>"><strong>Ver convocatoria</strong></a>
                                 </div>
                             </div>
                         </div>
@@ -101,7 +101,7 @@
                                             <span>&nbsp;<?= $item->vacancy_numbers ?>&nbsp;vacantes - &nbsp;<?= $item->type_offer ?></span>
                                         </li>
                                     </ul>
-                                    <a type="button" class="align-self-end btn btn-lg btn-block btn-danger" style="margin-top: auto;" href="/users/convocatoria/<?= $item->id; ?>"><strong>Ver convocatoria</strong></a>
+                                    <a type="button" class="align-self-end btn btn-lg btn-block btn-danger" style="margin-top: auto;" href="<?=base_url('/users/convocatoria/'. $item->id); ?>"><strong>Ver convocatoria</strong></a>
                                 </div>
                             </div>
                         </div>

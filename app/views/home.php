@@ -25,7 +25,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto:100,300,400,500,700|Philosopher:400,400i,700,700i')?>" rel="stylesheet">
 
     <!-- Bootstrap css -->
-    <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+    <!-- <link rel="stylesheet" href="<?=base_url('css/bootstrap.css')?>"> -->
     <link href="<?= base_url('public/app/lib/bootstrap/css/bootstrap.min.css') ?>" rel="stylesheet">
     <!-- Libraries CSS Files -->
     <link href="<?= base_url('public/app/lib/owlcarousel/assets/owl.carousel.min.css') ?>" rel="stylesheet">

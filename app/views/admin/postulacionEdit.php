@@ -40,7 +40,7 @@
             </div>
             <div class="col-auto">
                 <button class="btn btn-success" type="submit"></i>Actualizar estado de postulación</button>
-                <a class="btn btn-danger" href="/admin/postulaciones">Regresar</a>
+                <a class="btn btn-danger" href="<?=base_url('/admin/postulaciones')?>">Regresar</a>
             </div>
 
             <?= form_close() ?>

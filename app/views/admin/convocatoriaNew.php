@@ -123,7 +123,7 @@
                 <div class="row pt-3">
                     <div class="col-6 mx-auto">
                         <div class="d-md-flex align-items-center mt-3">
-                            <a href="/admin/convocatorias" class="btn btn-danger rounded-pill px-4" type="button">Cancelar</a>
+                            <a href="<?=base_url('/admin/convocatorias')?>" class="btn btn-danger rounded-pill px-4" type="button">Cancelar</a>
                             &nbsp;&nbsp;
                             <input class="btn btn-success pull-right font-weight-medium rounded-pill px-4" type="submit" value="Crear convocatoria" onclick="tinyMCE.triggerSave(true,true);"></input>
                         </div>

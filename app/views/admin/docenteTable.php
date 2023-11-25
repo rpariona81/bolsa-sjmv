@@ -26,10 +26,10 @@
                                 </button>
 
                                 &nbsp;
-                                <a class="btn btn-danger" href="/admin/docentes">Limpiar filtro</a>
+                                <a class="btn btn-danger" href="<?= base_url('/admin/docentes') ?>">Limpiar filtro</a>
 
                                 &nbsp;
-                                <a class="btn waves-effect waves-light btn-success pull-right hidden-sm-down" data-toggle="tooltip" data-placement="bottom" title="Crear nuevo registro" href="/admin/newdocente">Nuevo usuario&nbsp;&nbsp;<i class="fa fa-plus"></i></a>
+                                <a class="btn waves-effect waves-light btn-success pull-right hidden-sm-down" data-toggle="tooltip" data-placement="bottom" title="Crear nuevo registro" href="<?= base_url('/admin/newdocente') ?>">Nuevo usuario&nbsp;&nbsp;<i class="fa fa-plus"></i></a>
 
                             </div>
                         </div>
@@ -94,7 +94,7 @@
                                             }
                                             ?>
                                             &nbsp;&nbsp;
-                                            <a class="btn btn-outline-warning btn-sm" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Editar" href="/admin/docente/<?= $item->id ?>"><i class="fa fa-edit"></i></a>
+                                            <a class="btn btn-outline-warning btn-sm" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Editar" href="<?= base_url('/admin/docente/' . $item->id) ?>"><i class="fa fa-edit"></i></a>
                                         </div>
                                     </td>
                                 </tr>

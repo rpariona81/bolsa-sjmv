@@ -24,7 +24,7 @@
                                     <i class="fa fa-search"></i>&nbsp;Filtrar por programa
                                     <!--<i class="fa fa-filter"></i>-->
                                 </button>
-                                <a class="btn btn-danger" href="/admin/postulaciones">Limpiar filtro</a>
+                                <a class="btn btn-danger" href="<?=base_url('/admin/postulaciones')?>">Limpiar filtro</a>
                             </div>
                         </div>
                     </div>
@@ -101,7 +101,7 @@
                                             }
                                             ?>
                                             &nbsp;&nbsp;
-                                            <a class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="bottom" title="Editar" href="/admin/postulacion/<?= $item->id ?>"><i class="fa fa-edit"></i></a>
+                                            <a class="btn btn-outline-success btn-sm" data-toggle="tooltip" data-placement="bottom" title="Editar" href="<?=base_url('/admin/postulacion/'.$item->id) ?>"><i class="fa fa-edit"></i></a>
                                         </div>
                                     </td>
                                 </tr>

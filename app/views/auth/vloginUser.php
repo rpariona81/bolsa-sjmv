@@ -59,7 +59,7 @@
                                         <label for="inputPassword">Contraseña</label>
                                     </div>
                                     <div class="d-flex align-items-center justify-content-center mt-4 mb-0">
-                                        <a class="btn btn-warning" href="/">Regresar</a>&nbsp;&nbsp;
+                                        <a class="btn btn-warning" href="<?=base_url()?>">Regresar</a>&nbsp;&nbsp;
                                         <input class="btn btn-primary" id="btnLogin" type="submit" value="Ingresar"></input>
                                     </div>
                                     <?= form_close() ?>

@@ -30,7 +30,7 @@
             <div class="card-body">
                 <div class="table-responsive p-0">
                     <table id="datatablesSimple" name="datatablesSimple" class="table display nowrap table-hover table-bordered mb-0 border-top text-sm" style="width:100%">
-                    <thead class="bg-primary text-white">
+                        <thead class="bg-primary text-white">
                             <tr>
                                 <th>Cod Postulación</th>
                                 <th>Cod Oferta</th>
@@ -104,7 +104,7 @@
                                             }
                                             ?>
                                             &nbsp;&nbsp;
-                                            <a class="btn btn-outline-success btn-sm" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Editar" href="/admin/postulacion/<?= $item->id ?>"><i class="fa fa-edit"></i></a>
+                                            <a class="btn btn-outline-success btn-sm" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Editar" href="<?= base_url('/admin/postulacion/' . $item->id) ?> "><i class="fa fa-edit"></i></a>
                                         </div>
                                     </td>
                                 </tr>
@@ -112,7 +112,7 @@
                         </tbody>
                     </table>
                     <div class="col-auto">
-                        <a class="btn btn-primary" href="/admin/convocatorias">Regresar</a>
+                        <a class="btn btn-primary" href="<?=base_url('/admin/convocatorias')?>">Regresar</a>
                     </div>
                 </div>
             </div>
