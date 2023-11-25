@@ -1,2 +1,2 @@
-# bolsa-irrp
-Bolsa laboral actualizada IES RRP
+# bolsa-sjmv
+Bolsa laboral actualizada IES SJMV
