@@ -196,4 +196,9 @@ class UserEloquent extends BaseModel
         $lista['Contratado'] = 'Contratado';
         return $lista;
     }
+
+    public static function getCantEstudEgres()
+    {
+        return UserEloquent::where('role_id',4)->where('status',1)->count();
+    }
 }

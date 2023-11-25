@@ -67,7 +67,7 @@
                     <div class="team-block bottom">
                         <img src="<?= base_url('public/app/img/home/Especializacion_laboral.jpg') ?>" class="img-responsive" alt="img">
                         <div class="team-content">
-                            <a class="btn btn-large btn-primary px-5" href="/wp-login"><strong>Estudiantes y egresados</strong></a>
+                            <a class="btn btn-large btn-primary px-5" href="<?= base_url('/wp-login')?>"><strong>Estudiantes y egresados</strong></a>
                         </div>
                     </div>
                     <h4><i class="fa fa-mouse-pointer" aria-hidden="true"></i>&nbsp;&nbsp; Acceso para estudiantes y egresados</h4>
@@ -77,7 +77,7 @@
                     <div class="team-block bottom">
                         <img src="<?= base_url('public/app/img/home/estudiar-ingenieria-comercial.jpg') ?>" class="img-responsive" alt="img">
                         <div class="team-content">
-                            <a class="btn btn-large btn-info px-5" href="/wp-login"><strong>Docentes</strong></a>
+                            <a class="btn btn-large btn-info px-5" href="<?= base_url('/wp-login')?>"><strong>Docentes</strong></a>
                         </div>
                     </div>
                     <h4><i class="fa fa-mouse-pointer" aria-hidden="true"></i>&nbsp;&nbsp; Acceso para docentes</h4>
@@ -87,7 +87,7 @@
                     <div class="team-block bottom">
                         <img src="<?= base_url('public/app/img/home/systemadmin_2.jpg') ?>" class="img-responsive" alt="img">
                         <div class="team-content">
-                            <a class="btn btn-large btn-danger px-5" href="/wp-admin"><strong>Administrador</strong></a>
+                            <a class="btn btn-large btn-danger px-5" href="<?= base_url('/wp-admin')?>"><strong>Administrador</strong></a>
                         </div>
                     </div>
                     <h4><i class="fa fa-mouse-pointer" aria-hidden="true"></i>&nbsp;&nbsp; Acceso al Administrador</h4>

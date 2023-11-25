@@ -2,8 +2,10 @@
 
 use Db\BaseModel;
 use Illuminate\Support\Carbon;
-
 use \Illuminate\Database\Capsule\Manager as DB;
+use \Illuminate\Database\Query\Builder;
+
+use Models\Usereloquent;
 
 class CareerEloquent extends BaseModel
 {
@@ -73,15 +75,20 @@ class CareerEloquent extends BaseModel
         return CareerEloquent::where($column, '=', $value)->first();
     }
 
+    public static function getCantCareers()
+    {
+        return CareerEloquent::count();
+    }
+
     public static function checkProgramRecords($id_career)
     {
         $cantUsers = DB::table('t_users')
             ->where('career_id', $id_career)
             ->exists();
-            /*->selectRaw('count(id) as cant_users')
+        /*->selectRaw('count(id) as cant_users')
             ->pluck('cant_users');*/
 
-            $cantOffers = DB::table('t_offersjob')
+        $cantOffers = DB::table('t_offersjob')
             ->where('career_id', $id_career)
             ->exists();
 
@@ -108,5 +115,24 @@ class CareerEloquent extends BaseModel
         } else {
             return TRUE;
         }
+    }
+
+    public static function getCantUsersByCareer()
+    {
+
+        $cantUsers = DB::table('t_users')
+            ->selectRaw('count(id) as cant_Users, career_id')
+            ->where('role_id', '=', 4)
+            ->where('status', '=', 1)
+            ->groupBy('career_id');
+
+        //https://laracasts.com/discuss/channels/eloquent/laravel-scope-leftjoinsub-doesnt-work
+        $data = CareerEloquent::leftjoinSub($cantUsers, 'cantUsers', function ($join) {
+            $join->on('t_careers.id', '=', 'cantUsers.career_id');
+        })
+            ->orderBy('t_careers.career_title', 'asc')
+            ->get(['t_careers.career_title', 'cantUsers.cant_Users']);
+
+        return $data;
     }
 }

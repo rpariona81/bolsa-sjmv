@@ -18,7 +18,7 @@
     <!--<link href="<?= base_url('public/admin/dist/css/style.min.css') ?>" rel="stylesheet" />-->
     <!-- This Page CSS -->
     <link rel="stylesheet" href="<?= base_url('public/admin/dist/libs/prismjs/themes/prism-okaidia.min.css') ?>">
-
+    <link href="<?= base_url('public/app/font-awesome/4.7.0/css/font-awesome.min.css') ?>" rel="stylesheet">
     <link href="<?= base_url('public/admin/assets/plugins/datatable/css/dataTables.bootstrap4.min.css') ?>" rel="stylesheet" />
     <link href="<?= base_url('public/admin/assets/plugins/datatable/css/responsive.datatables.min.css') ?>" rel="stylesheet" />
     <link href="<?= base_url('public/admin/assets/plugins/datatable/css/buttons.dataTables.min.css') ?>" rel="stylesheet" />

@@ -18,7 +18,6 @@ class AdminController extends CI_Controller
         $this->form_validation->set_message('no_repetir_document', 'Existe otro registro con el mismo %s');
         $this->form_validation->set_message('no_repetir_email_admin', 'Existe otro registro con el mismo %s');
         $this->form_validation->set_message('no_repetir_programa', 'Existe otro programa con el mismo %s');
-        $this->form_validation->set_message('tiene_registros', 'No se puede eliminar porque tiene registros');
         /**
          * En caso se defina el campo mobile como único, validaremos si ya se registró anteriormente
          */
@@ -29,6 +28,12 @@ class AdminController extends CI_Controller
     {
         if ($this->session->userdata('user_rol') == 'admin') {
             $data['contenido'] = 'admin/dashboard';
+            $data['cantEstudEgres'] = UserEloquent::getCantEstudEgres();
+            $data['cantCareers'] = CareerEloquent::getCantCareers();
+            $data['cantOffersjobs'] = OfferJobEloquent::getCantOffersjobs();
+            $data['cantPostulations'] = PostulateJobEloquent::getCantPostulations();
+            $data['cantUsersByCareer'] = CareerEloquent::getCantUsersByCareer();
+            $data['offersjobsLast'] = OfferJobEloquent::getOffersjobsLast();
             $this->load->view('admin/templateAdmin', $data);
         } else {
             $this->session->set_flashdata('error');
@@ -857,7 +862,7 @@ class AdminController extends CI_Controller
     }
 
 
-    /**
+/**
      * CONTROL DE PROGRAMAS DE ESTUDIOS
      *  */
 
@@ -950,16 +955,6 @@ class AdminController extends CI_Controller
         }
     }
 
-    /*public function tiene_registros($registro)
-    {
-        $id_career = $this->input->post('id_career', true);
-        $check = CareerEloquent::checkProgramRecords($id_career);
-        if ($check) {
-            return FALSE;
-        } else {
-            return TRUE;
-        }
-    }*/
     public function eliminaPrograma()
     {
         if ($this->session->userdata('user_rol') == 'admin') {
@@ -988,5 +983,6 @@ class AdminController extends CI_Controller
             redirect('/wp-admin');
         }
     }
+
 }
 /* End of file Controllername.php */

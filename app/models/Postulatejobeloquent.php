@@ -93,6 +93,12 @@ class PostulateJobEloquent extends BaseModel
             ->first();
     }
 
+    public static function getCantPostulations()
+    {
+        return PostulateJobEloquent::where('status', 1)->count();
+    }
+
+
     public static function getSelectResult()
     {
         $results = DB::table('t_result_postulate')

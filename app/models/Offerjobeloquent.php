@@ -101,6 +101,11 @@ class OfferJobEloquent extends BaseModel
             ->first();
     }
 
+    public static function getCantOffersjobs()
+    {
+        return OfferJobEloquent::where('status',1)->count();
+    }
+
     public static function getOffersjobs()
     {
         /*$recuentoPostulantes = DB::table('t_postulatejob')
@@ -159,6 +164,13 @@ class OfferJobEloquent extends BaseModel
         }
 
         return $data;
+    }
+
+    public static function getOffersjobsLast()
+    {
+
+        return OfferJobEloquent::leftjoin('t_careers', 't_careers.id', '=', 't_offersjob.career_id')->where('t_offersjob.status', '=', 1)->whereDate('t_offersjob.date_vigency', '>=', Carbon::now())->take(3)->orderBy('t_offersjob.date_vigency', 'desc')->get(['t_offersjob.*', 't_careers.career_title']);
+
     }
 
     public static function getTotOffersjobsByVigency($user_carrera_id = NULL)
