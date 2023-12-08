@@ -240,7 +240,7 @@ class AppController extends CI_Controller
             'msg_postulant' => $this->input->post('msg_postulant', TRUE),
             'email_notification' => $this->session->userdata('user_email'),
             'date_postulation' => date("Y-m-d H:i:s"),
-            'result' => 'Enviado'
+            'result' => 2
         );
         //echo json_encode($data);
         //print_r($_FILES);
